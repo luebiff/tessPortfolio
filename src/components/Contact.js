@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../scss/contact/contact.scss'
+import emailjs from 'emailjs-com'
 
 export class Contact extends Component {
     state = {
@@ -20,7 +21,12 @@ export class Contact extends Component {
       handleSubmit = (e) => {
         console.log("submit");
         e.preventDefault();
-        
+        emailjs.sendForm('gmail', 'template_tszj2os', e.target, 'user_8Kx0RsphQrT5xVlrpexCb')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
         
         e.target.reset()
       };
@@ -30,7 +36,6 @@ export class Contact extends Component {
                 <div className="formContainer">
                 <div className="formHeading">Skapa kontakt</div>
                     <form className="form" onSubmit={this.handleSubmit}>
-                        {/* <label htmlFor="inputName"></label> */}
                         <input
                         placeholder="Namn"
                         className="inputName"
@@ -38,7 +43,6 @@ export class Contact extends Component {
                         name="inputName"
                         type="text"
                         />
-                        {/* <label htmlFor="inputEmail"></label> */}
                         <input
                         placeholder="E-post"
                         className="inputEmail"
@@ -56,7 +60,7 @@ export class Contact extends Component {
                         rows="10"
                         ></textarea>
                         <button className="submitBtn" >
-                        Skicka
+                          Skicka
                         </button>
                     </form>
                 </div>

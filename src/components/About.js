@@ -96,7 +96,6 @@ export class About extends Component {
                    </div>
                 </div>
                 <div className="qualificationsContainer">
-                    <p className="">Meriter</p>
                     <div className="qualifications">
                         <div className="qualification">
                             <div className="info">

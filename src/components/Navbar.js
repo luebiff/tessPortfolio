@@ -43,7 +43,7 @@ export class Navbar extends Component {
         </NavLink>
         <NavLink onClick={this.handleNavClick} activeClassName="activeLink" className="link" to="/about">
           <FontAwesomeIcon icon={faSmile} />
-          <p className="navTxt">Ommig</p>
+          <p className="navTxt">Om mig</p>
         </NavLink>
         <NavLink onClick={this.handleNavClick} activeClassName="activeLink" className="link" to="/work">
           <FontAwesomeIcon icon={faBriefcase} />

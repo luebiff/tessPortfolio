@@ -1,0 +1,231 @@
+@import "../variables/variables.scss";
+
+.aboutContainer {
+  .infoContainer {
+    //width: 250px;
+    display: grid;
+    grid-template-columns: minmax(200px, 250px) minmax(257px, 1fr);
+    grid-template-rows: 1fr auto;
+    grid-gap: 20px;
+    margin-bottom: 20px;
+    // border: 1px solid red;
+
+    .aboutInfo {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      .name,
+      .sNumber,
+      .number,
+      .email,
+      .address,
+      .relationship {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        //   p {
+        //     margin-left: 5px;
+        //   }
+        .icon {
+          font-size: 1.3rem;
+          color: $primaryColor;
+        }
+      }
+      .name {
+        height: 28px;
+        line-height: 28px;
+        .icon {
+          font-size: 2.1rem;
+        }
+      }
+      .number {
+        .icon {
+          font-size: 1.7rem;
+        }
+      }
+      .address {
+        text-align: end;
+        .icon {
+          font-size: 1.7rem;
+        }
+      }
+    }
+    .personalLetter {
+      grid-column: 2/3;
+      grid-row: 1/3;
+    }
+  }
+
+  .qualificationsContainer {
+    margin-bottom: 15px;
+    .qualifications {
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+
+      .qualification {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 130px;
+        width: 450px;
+        position: relative;
+
+        overflow: hidden;
+
+        .info {
+          position: absolute;
+          top: -5px;
+          left: 45px;
+          width: 100px;
+          .qualiName {
+            // position: absolute;
+            // top: 10px;
+            // right: 20px;
+          }
+          .year {
+            // position: absolute;
+            // top: -5px;
+            // left: 60px;
+            font-size: 2.5rem;
+          }
+        }
+
+        // .line {
+        //   height: 2px;
+        //   width: 200px;
+        //   margin-top: 80px;
+        //   background: $primaryColor;
+        //   transform: rotate(45deg);
+
+        //   animation: grow 1s linear forwards;
+        // }
+      }
+
+      .qualification2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 130px;
+        width: 450px;
+        position: relative;
+        // margin-top: 10px;
+        overflow: hidden;
+        // animation: show 1s linear forwards;
+
+        .info {
+          position: absolute;
+          top: -5px;
+          right: 45px;
+          width: 100px;
+          .qualiName {
+          }
+          .year {
+            font-size: 2.5rem;
+          }
+        }
+
+        // .line {
+        //   height: 2px;
+        //   width: 200px;
+        //   margin-top: 55px;
+        //   background: $primaryColor;
+        //   transform: rotate(-45deg);
+
+        //   animation: grow2 1s linear forwards;
+        //   animation-delay: 1s;
+        // }
+      }
+      .line {
+        height: 2px;
+        width: 200px;
+        margin-top: 70px;
+        background: $primaryColor;
+        // transform: rotate(45deg);
+        transform: rotate(45deg) translatex(-120%) translatey(0px);
+        animation: grow 1s linear forwards;
+        animation-delay: 1s;
+      }
+      .line2 {
+        height: 2px;
+        width: 200px;
+        margin-top: 60px;
+        background: $primaryColor;
+        transform: rotate(-45deg) translatex(120%) translatey(0);
+
+        animation: grow2 1s linear forwards;
+        animation-delay: 1s;
+      }
+      @keyframes grow {
+        0% {
+          transform: rotate(45deg) translatex(-100%) translatey(0px);
+        }
+
+        100% {
+          transform: rotate(45deg) translatex(0) translatey(0);
+        }
+      }
+      @keyframes grow2 {
+        0% {
+          transform: rotate(-45deg) translatex(100%) translatey(0);
+        }
+
+        100% {
+          transform: rotate(-45deg) translatex(0px) translatey(0px);
+        }
+      }
+      @keyframes show {
+        /* 0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        } */
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .referenceContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-gap: 20px;
+    .reference {
+      height: 300px;
+      background-color: $secendaryBg;
+      padding: 15px;
+      border-radius: 8px;
+      display: grid;
+      grid-template-rows: 2fr 1fr;
+      grid-gap: 20px;
+
+      .txtCont {
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        .quote {
+          color: $primaryColor;
+        }
+        .quoteStart {
+          align-self: flex-start;
+          margin-bottom: 5px;
+        }
+
+        .quoteEnd {
+          align-self: flex-end;
+          margin-top: 5px;
+        }
+      }
+      .refCont {
+        grid-row: 2/3;
+        align-self: end;
+      }
+    }
+  }
+}

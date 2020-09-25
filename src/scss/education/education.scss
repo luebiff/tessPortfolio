@@ -1,0 +1,44 @@
+@import "../variables/variables.scss";
+
+.educationContainer {
+  div {
+    margin-bottom: 30px;
+  }
+  .year {
+    color: $primaryTxtColor;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $primaryColor;
+      margin-right: 8px;
+      z-index: 2;
+    }
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 80px;
+
+      background-color: rgb(75, 75, 75);
+      margin-right: 8px;
+      position: absolute;
+      bottom: -65px;
+      left: 4.8px;
+    }
+  }
+
+  .education {
+    color: $primaryTxtColor;
+    font-size: 1.1rem;
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,49 @@
+.educationContainer div {
+  margin-bottom: 30px;
+}
+
+.educationContainer .year {
+  color: #f5f5f5;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.educationContainer .year:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #1fc06f;
+  margin-right: 8px;
+  z-index: 2;
+}
+
+.educationContainer .year:after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 80px;
+  background-color: #4b4b4b;
+  margin-right: 8px;
+  position: absolute;
+  bottom: -65px;
+  left: 4.8px;
+}
+
+.educationContainer .education {
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  margin-left: 20px;
+}
+/*# sourceMappingURL=education.css.map */

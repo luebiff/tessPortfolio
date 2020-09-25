@@ -1,0 +1,23 @@
+@import "../variables/variables.scss";
+
+.homeContainer {
+  color: $primaryTxtColor;
+  position: relative;
+  .nameContainer {
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .name {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .description {
+      font-size: 1.8;
+    }
+  }
+}

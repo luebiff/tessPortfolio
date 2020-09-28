@@ -76,7 +76,7 @@
   transition: 1s all ease;
   position: absolute;
   top: 50px;
-  right: 70px;
+  right: 30px;
   width: 40px;
   height: 30px;
 
@@ -103,15 +103,17 @@
 
 @media #{$tablet} {
   .hamX {
-    transition: 1s ease;
     span {
       &:nth-last-child(1) {
         width: 30px;
-        transform: rotate(45deg);
-        margin-bottom: 40px;
+        // transform: rotate(45deg);
+
+        transform: translate(0px, -10px) rotate(45deg);
       }
       &:nth-last-child(2) {
-        transform: rotate(-45deg);
+        // transform: rotate(-45deg);
+
+        transform: translate(0px, 0px) rotate(-45deg);
       }
       // &:nth-last-child(3) {
       //   top: 40px;
@@ -123,7 +125,7 @@
     display: block;
   }
   .open {
-    // transition: 1s all ease;
+    transition: 1s all ease;
     transform: translateX(-50%);
     background-color: $secendaryBg;
     width: 100%;
@@ -134,6 +136,7 @@
   .close {
     transform: translateX(100%);
     display: none;
+    transition: 1s all ease;
   }
   .navbar {
     background-color: $secendaryBg;
